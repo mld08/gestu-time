@@ -65,7 +65,7 @@ def create_badge(emp_id, first_name, last_name):
 
     # Sauvegarder le badge
     badge_path = os.path.join(QR_FOLDER, f"{emp_id}.png")
-    badge.save(badge_path)
+    badge.save(badge_path, format="PNG", quality=100)
 
 def get_db_connection():
     """Connexion à la base SQLite"""
